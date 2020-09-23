@@ -37,8 +37,6 @@ public interface ServidorMetodos extends Remote {
     public void eliminarSubasta(SubastaInt subasta) throws RemoteException;
     
     
-    
-    
         
     
     

@@ -19,8 +19,5 @@ public class Oferta implements Serializable {
         this.oferta = oferta;
         this.fecha = new Date();
     }
-    
-    
-    
-    
+
 }

@@ -188,7 +188,7 @@ public class NuevaOferta extends javax.swing.JFrame {
                     String tale = "";
                     
                     if(s.getUltimaOferta() != -1.0) {
-                        tale = String.valueOf(s.getUltimaOferta());
+                        tale = String.valueOf(s.getUltimaOferta() + 10);
                     } else {
                         tale = String.valueOf(s.getPrecio());
                     }
@@ -196,6 +196,7 @@ public class NuevaOferta extends javax.swing.JFrame {
                  
                     model.addElement(s.getProducto().getNombre() + " " + tale);
                     this.todasSubastas.add(s);
+                    monto.setText(tale);
                     //model.addRow(new Object[]{s.getProducto().getNombre(), s.getPrecio(),s.getProducto().getDueno().getNombre(), lastOffer, status, new JButton("Ofertar") });
                     System.out.println(s.getProducto().getNombre());
                 }

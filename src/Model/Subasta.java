@@ -111,7 +111,10 @@ public class Subasta implements Serializable, SubastaInt {
     }
     
     public void agregarOferta(Oferta o) {
-        this.ofertas.add(o);
+        if (!ofertas.contains(o)) {
+            this.ofertas.add(o);
+        }
+        
     }
     
     @Override

@@ -141,7 +141,9 @@ public class Server implements Remote, ServidorMetodos {
 
     @Override
     public void crearSubastas(SubastaInt sub) {
-        subastas.add(sub);
+        if (!subastas.contains(sub)) {
+            subastas.add(sub);
+        }
         //Notificar Clientes
         this.mandarActualizacionAClientes();
     }
@@ -157,7 +159,6 @@ public class Server implements Remote, ServidorMetodos {
         }
 
         if (laSubasta != null) {
-
             laSubasta.agregarOferta(o);
             this.mandarActualizacionAClientes();
 

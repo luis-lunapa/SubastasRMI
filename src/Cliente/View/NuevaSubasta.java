@@ -8,6 +8,7 @@ package Cliente.View;
 import Cliente.Utilidades;
 import Model.*;
 import java.awt.FlowLayout;
+import java.awt.event.ItemEvent;
 import java.rmi.RemoteException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -82,6 +83,11 @@ public class NuevaSubasta extends javax.swing.JFrame {
 
         productos.setFont(new java.awt.Font("DecoType Naskh", 0, 18)); // NOI18N
         productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        productos.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                productosItemStateChanged(evt);
+            }
+        });
 
         precio.setFont(new java.awt.Font("DecoType Naskh", 0, 18)); // NOI18N
 
@@ -235,6 +241,32 @@ public class NuevaSubasta extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_formWindowOpened
+
+    private void productosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_productosItemStateChanged
+        
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            System.out.println("Product chosen !");
+            String selected = (String) productos.getSelectedItem();
+            
+            try {
+            ProductoInt product = null;
+            
+            for (ProductoInt prod : Cliente.Cliente.usuario.getProductosComprados()) {
+                if (prod.getNombre().equals(selected)) {
+                    product = prod;
+                }
+            }
+            
+            if (product != null) {
+                this.precio.setText(String.valueOf(product.getPrecio()));
+            }
+            
+            } catch (RemoteException ex) {
+            Logger.getLogger(NuevaSubasta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+        }
+    }//GEN-LAST:event_productosItemStateChanged
 
     public void getProductosModel() {
         try {

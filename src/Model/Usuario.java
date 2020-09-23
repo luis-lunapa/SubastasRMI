@@ -137,15 +137,10 @@ public class Usuario implements Serializable, UsuarioInt {
     public void vender(ProductoInt producto) throws RemoteException {
         //Buscar producto en productosComprados para eliminarlo
         System.out.println("Voy a eliminar un prodcuto del usuario");
-        System.out.println("Numero de productos (ANTES): " + this.productosComprados.size());
         
-        //productosComprados.remove
-        //productosComprados.remove(producto);
+        productosComprados.remove(producto);
         
         this.setSaldo(getSaldo() + producto.getPrecio());
-        System.out.println("Numero de productos (DESPUES): " + this.productosComprados.size());
-        //Agregar producto a productosEnVenta
-        //this.productosEnVenta.add(producto);
     }
 
 }

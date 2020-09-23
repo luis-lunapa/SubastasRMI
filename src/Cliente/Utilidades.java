@@ -18,6 +18,7 @@ public class Utilidades {
     public static void showWarning(String mensaje) {
         JOptionPane.showMessageDialog(null, mensaje, "Error !", JOptionPane.WARNING_MESSAGE);
     }
+    
     public static int showConfirm (String mensaje){
         int option = JOptionPane.showConfirmDialog(null, mensaje, "UBay", 0, 0, null);
         return option;
