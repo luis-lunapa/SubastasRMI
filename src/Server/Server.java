@@ -43,7 +43,7 @@ public class Server implements Remote, ServidorMetodos {
             u1.setDireccion("10B Sur");
             server.users.add(u1);
 
-            Usuario u2 = new Usuario("Mónica Perez Paredes", "moni", "123", "monica.perezps@udlap.mx");
+            Usuario u2 = new Usuario("Luis Antonio Vazquez", "tony", "123", "luis.vazquezga@udlap.mx");
             u2.setDireccion("Rosas");
             server.users.add(u2);
 
@@ -58,6 +58,10 @@ public class Server implements Remote, ServidorMetodos {
             Producto p2 = new Producto("Perros", u2, 750.40);
             u2.agregarProductosComprados(p2);
             u2.agregarProductosEnVenta(p2);
+            
+            Producto p3 = new Producto("XBox", u2, 3000.00);
+            u2.agregarProductosComprados(p3);
+            u2.agregarProductosEnVenta(p3);
             
             server.crearSubastas(new Subasta(200.00, p2, new Date()));
 
