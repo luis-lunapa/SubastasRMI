@@ -4,6 +4,7 @@ import Cliente.*;
 import java.rmi.*;
 import Model.*;
 import Cliente.View.*;
+import java.util.HashSet;
 
 import java.util.LinkedList;
 /**
@@ -19,8 +20,8 @@ public interface ServidorMetodos extends Remote {
     
     
     public void productos () throws RemoteException;
-    public LinkedList<UsuarioInt> getUsuarios() throws RemoteException;
-    public LinkedList<SubastaInt> subastas () throws RemoteException;
+    public HashSet<UsuarioInt> getUsuarios() throws RemoteException;
+    public HashSet<SubastaInt> subastas () throws RemoteException;
     public void crearSubastas (SubastaInt sub) throws RemoteException;
     
     public void agregarOfertas(Oferta o, SubastaInt s) throws RemoteException;

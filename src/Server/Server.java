@@ -13,18 +13,16 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import java.util.HashSet;
 /**
  *
  * @author luisluna
  */
 public class Server implements Remote, ServidorMetodos {
 
-    public LinkedList<UsuarioInt> users = new LinkedList<>();
-    public LinkedList<SubastaInt> subastas = new LinkedList<>();
-
-    public LinkedList<ClienteMetodos> clientes = new LinkedList<>();
-
+    public HashSet<UsuarioInt> users = new HashSet<>();
+    public HashSet<SubastaInt> subastas = new HashSet<>();
+    public HashSet<ClienteMetodos> clientes = new HashSet<>();
     ///
     /*
          * Codigo para hacer la conexion con el servidor
@@ -123,18 +121,20 @@ public class Server implements Remote, ServidorMetodos {
     }
 
     @Override
-    public LinkedList<UsuarioInt> getUsuarios() throws RemoteException {
-        LinkedList<UsuarioInt> usuariosActivos = new LinkedList<>();
+    public HashSet<UsuarioInt> getUsuarios() throws RemoteException {
+        HashSet<UsuarioInt> usuariosActivos = new HashSet<>();
         for (UsuarioInt u : this.users) {
             if (u.getEnLinea()) {
                 usuariosActivos.add(u);
             }
         }
+        
+        System.out.println("Usuarios activos: " + usuariosActivos.toString());
         return usuariosActivos;
     }
 
     @Override
-    public LinkedList<SubastaInt> subastas() throws RemoteException {
+    public HashSet<SubastaInt> subastas() throws RemoteException {
         return this.subastas;
 
     }

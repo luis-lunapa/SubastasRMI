@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/luisluna/Google%20Drive/Universidad/Semestre%206/Sistemas%20Distribuidos/TP3%20Subastas/src/Cliente/Cliente.java</file>
-            <file>file:/Users/luisluna/Google%20Drive/Universidad/Semestre%206/Sistemas%20Distribuidos/TP3%20Subastas/src/Server/Server.java</file>
+            <file>file:/Users/lgpena/Github/TP3%20Subastas/src/Server/Server.java</file>
+            <file>file:/Users/lgpena/Github/TP3%20Subastas/src/Model/UsuarioInt.java</file>
+            <file>file:/Users/lgpena/Github/TP3%20Subastas/src/Model/Usuario.java</file>
+            <file>file:/Users/lgpena/Github/TP3%20Subastas/src/Cliente/View/VentanaPrincipal.java</file>
+            <file>file:/Users/lgpena/Github/TP3%20Subastas/src/Cliente/ClienteMetodos.java</file>
+            <file>file:/Users/lgpena/Github/TP3%20Subastas/src/Server/ServidorMetodos.java</file>
+            <file>file:/Users/lgpena/Github/TP3%20Subastas/src/Cliente/Cliente.java</file>
         </group>
     </open-files>
 </project-private>

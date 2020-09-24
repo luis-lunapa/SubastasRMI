@@ -402,7 +402,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         try {
 
             DefaultTableModel model = (DefaultTableModel) usuariosActivos.getModel();
-
+            
+            model.setRowCount(0);
+            
             for (int i = 0; i < model.getRowCount(); i++) {
                 model.removeRow(i);
 
@@ -454,6 +456,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         try {
             enVenta.removeAll();
             DefaultTableModel model = (DefaultTableModel) enVenta.getModel();
+            model.setRowCount(0);
             for (int i = 0; i < model.getRowCount(); i++) {
                 model.removeRow(i);
 
@@ -496,6 +499,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             DefaultTableModel model = (DefaultTableModel) subastas.getModel();
             
+            model.setRowCount(0);
             for (int i = 0; i < model.getRowCount(); i++) {
                 model.removeRow(i);
 
@@ -547,6 +551,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         try {
 
             DefaultTableModel model = (DefaultTableModel) misOfertas.getModel();
+            model.setRowCount(0);
             for (int i = 0; i < model.getRowCount(); i++) {
                 model.removeRow(i);
 
